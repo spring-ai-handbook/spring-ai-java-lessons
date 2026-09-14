@@ -1,0 +1,21 @@
+spring:
+  application:
+    name: spring-ai-java-lessons
+  ai:
+    model:
+      # 明确指定聊天模型由 DeepSeek 提供。
+      chat: deepseek
+    deepseek:
+      # 建议通过系统环境变量传入真实 API Key。
+      api-key: ${DEEPSEEK_API_KEY:}
+      base-url: ${DEEPSEEK_BASE_URL:https://api.deepseek.com}
+      chat:
+        # 如果你当前账号使用其他 DeepSeek 模型，可以通过环境变量覆盖。
+        model: ${DEEPSEEK_MODEL:deepseek-chat}
+
+server:
+  port: 8080
+
+logging:
+  level:
+    com.example.aidemo1: INFO
