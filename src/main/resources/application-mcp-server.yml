@@ -1,0 +1,13 @@
+server:
+  port: 8081
+
+spring:
+  ai:
+    mcp:
+      client:
+        enabled: false
+      server:
+        enabled: true
+        name: lesson15-mcp-server
+        version: 1.0.0
+        protocol: STREAMABLE
